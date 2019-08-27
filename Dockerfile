@@ -11,5 +11,5 @@ RUN apt-get update && apt-get --assume-yes install default-jdk
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i /google-chrome-stable_current_amd64.deb || apt --fix-broken --assume-yes install && dpkg -i /google-chrome-stable_current_amd64.deb
 
-# Update the WebDriver
-RUN webdriver-manager update
+# Install the WebDriver
+#RUN npm i selenium-webdriver
