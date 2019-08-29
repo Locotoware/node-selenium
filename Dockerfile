@@ -5,7 +5,7 @@ FROM node:10.16.0
 RUN npm i yarn
 
 # Install JDK
-RUN apt-get update && apt-get --assume-yes install default-jdk
+RUN apt-get update && apt-get --assume-yes install default-jdk && npm install -g protractor
 
 # Download and install Chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
