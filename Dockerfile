@@ -5,7 +5,7 @@ FROM node:10.16.0
 RUN npm i yarn
 
 # Install JDK
-RUN apt-get update && apt-get --assume-yes install default-jdk && npm install -g protractor
+RUN apt-get update && apt-get --assume-yes install default-jre && npm install -g protractor
 
 # Download and install Chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
