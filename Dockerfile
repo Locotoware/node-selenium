@@ -12,5 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends chromium
  
 ENV CHROME_BIN=chromium
 
+# Add the latest ChromeDriver
+RUN yarn add chromedriver
+
 # Update the WebDriver
 RUN webdriver-manager update
