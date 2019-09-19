@@ -1,5 +1,5 @@
 # base image
-FROM node:10.16.0
+FROM node:10.16.3-buster
 
 # install yarn
 RUN npm i yarn
