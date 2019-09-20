@@ -16,4 +16,4 @@ ENV CHROME_BIN=chromium
 RUN yarn add chromedriver --chromedriver_version=76.0.3809.100
 
 # Update the WebDriver
-RUN webdriver-manager update
+RUN webdriver-manager update --versions.chromium=76.0.3809.100
