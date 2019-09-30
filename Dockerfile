@@ -14,6 +14,3 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
  
 # Add the latest ChromeDriver
 RUN yarn add chromedriver
-
-# Update the WebDriver
-RUN webdriver-manager update
