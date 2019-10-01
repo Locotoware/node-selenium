@@ -4,6 +4,15 @@ FROM node:10.16.3-buster
 # install yarn
 RUN npm i yarn
 
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# Install Angular cli
+RUN yarn global add @angular/cli@8.1.0
+
 # Install JDK
 RUN apt-get update && apt-get --assume-yes install default-jre && npm install -g protractor
 
@@ -14,3 +23,4 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
  
 # Add the latest ChromeDriver
 RUN yarn add chromedriver
+
