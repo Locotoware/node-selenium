@@ -11,7 +11,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 # Install Angular cli
-RUN yarn global add @angular/cli@8.1.0
+RUN yarn global add @angular/cli
 
 # Install JDK
 RUN apt-get update && apt-get --assume-yes install default-jre && npm install -g protractor
